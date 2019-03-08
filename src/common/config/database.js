@@ -5,7 +5,7 @@ module.exports = {
   database: 'nideshop',
   prefix: 'nideshop_',
   encoding: 'utf8mb4',
-  host: 'localhost', // 本地
+  host: '127.0.0.1', // 本地
   // host: '118.190.147.56',// 远程地址
   port: '3306',
   user: 'root',
