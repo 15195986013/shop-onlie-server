@@ -1,6 +1,7 @@
 module.exports = class extends think.Model {
   async addFootprint(userId, goodsId) {
     // 用户已经登录才可以添加到足迹
+    // 时间需要修改
     if (userId > 0 && goodsId > 0) {
       await this.add({
         goods_id: goodsId,
