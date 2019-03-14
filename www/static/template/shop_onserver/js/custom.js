@@ -296,9 +296,9 @@ function shopList() {
   var list = $('#list');
   var contentGoods = $('#contentGoods');
   contentGoods.empty();
-  $.getJSON("./json/GoodsList.json",function (data) {
-    var goods = data ||[];
-    goods.forEach(function (good, index) {
+  $.getJSON('./json/GoodsList.json', function(data) {
+    var goods = data || [];
+    goods.forEach(function(good, index) {
       contentGoods.append(getGoodInfo(good));
     });
     list.on('click', 'li', function() {
@@ -308,20 +308,17 @@ function shopList() {
     });
     list.find('li:eq(0)').trigger('click');
   });
-
-
 }
 
 function getGoodInfo(good) {
-
-  var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type='+good.type+'>\n' +
+  var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type=' + good.type + '>\n' +
       '                            <div class="single-product-item">\n' +
       '                                <div class="img-holder">\n' +
-      '                                    <img src="'+good.img+'" alt="Awesome Product Image">\n' +
+      '                                    <img src="' + good.img + '" alt="Awesome Product Image">\n' +
       '                                    <div class="overlay-box">\n' +
       '                                        <div class="box">\n' +
       '                                            <div class="content">\n' +
-      '                                                <a class="thm-btn bg-1" href="shop-single.html?id='+good.id+'"">查看详情</a>\n' +
+      '                                                <a class="thm-btn bg-1" href="shop-single.html?id=' + good.id + '"">查看详情</a>\n' +
       '                                            </div>\n' +
       '                                        </div>\n' +
       '                                    </div>\n' +
@@ -330,7 +327,7 @@ function getGoodInfo(good) {
       '                                    <div class="top clearfix">\n' +
       '                                        <div class="product-title pull-left">\n' +
       '                                            <a href="shop-single.html">\n' +
-      '                                                <h5>'+good.info+'</h5>\n' +
+      '                                                <h5>' + good.info + '</h5>\n' +
       '                                            </a>\n' +
       '                                        </div>\n' +
       '                                        <div class="review-box pull-right">\n' +
@@ -345,7 +342,7 @@ function getGoodInfo(good) {
       '                                </div>\n' +
       '\n' +
       '                            </div>\n' +
-      '                        </div>'
+      '                        </div>';
 
   return $(goodDom);
 }
