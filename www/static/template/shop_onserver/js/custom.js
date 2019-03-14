@@ -294,9 +294,57 @@ function timepicker() {
 
 function shopList() {
   var li = $('.categories.clearfix');
-  li.on('click', 'li', function() {
+  var contentGoods = $('#contentGoods');
 
+  contentGoods.empty();
+  $.getJSON("./json/GoodsList.json",function (data) {
+    var goods = data ||[];
+    goods.forEach(function (good, index) {
+      contentGoods.append(getGoodInfo(good));
+    });
+    li.on('click', 'li', function() {
+    });
   });
+
+
+}
+
+function getGoodInfo(good) {
+
+  var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12">\n' +
+      '                            <div class="single-product-item">\n' +
+      '                                <div class="img-holder">\n' +
+      '                                    <img src="'+good.img+'" alt="Awesome Product Image">\n' +
+      '                                    <div class="overlay-box">\n' +
+      '                                        <div class="box">\n' +
+      '                                            <div class="content">\n' +
+      '                                                <a class="thm-btn bg-1" href="shop-single.html">查看详情</a>\n' +
+      '                                            </div>\n' +
+      '                                        </div>\n' +
+      '                                    </div>\n' +
+      '                                </div>\n' +
+      '                                <div class="title-holder">\n' +
+      '                                    <div class="top clearfix">\n' +
+      '                                        <div class="product-title pull-left">\n' +
+      '                                            <a href="shop-single.html">\n' +
+      '                                                <h5>'+good.info+'</h5>\n' +
+      '                                            </a>\n' +
+      '                                        </div>\n' +
+      '                                        <div class="review-box pull-right">\n' +
+      '                                            <ul>\n' +
+      '                                                <li><i class="fa fa-star"></i></li>\n' +
+      '                                                <li><i class="fa fa-star"></i></li>\n' +
+      '                                                <li><i class="fa fa-star"></i></li>\n' +
+      '                                                <li><i class="fa fa-star"></i></li>\n' +
+      '                                            </ul>\n' +
+      '                                        </div>\n' +
+      '                                    </div>\n' +
+      '                                </div>\n' +
+      '\n' +
+      '                            </div>\n' +
+      '                        </div>'
+
+  return $(goodDom);
 }
 
 // Contact Form Validation
