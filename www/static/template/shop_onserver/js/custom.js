@@ -303,8 +303,11 @@ function shopList() {
     });
     list.on('click', 'li', function() {
       var type = $(this).attr('data-title');
+      $('.goodsList').hide();
       var select = $('[data-type="' + type + '"]');
-      select.show().siblings('.goodsList').hide();
+      select.show();
+
+      // select.show().siblings('.goodsList:not('+select+')').hide();
     });
     list.find('li:eq(0)').trigger('click');
   });
@@ -314,7 +317,7 @@ function getGoodInfo(good) {
   var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type=' + good.type + '>\n' +
       '                            <div class="single-product-item">\n' +
       '                                <div class="img-holder">\n' +
-      '                                    <img src="' + good.img + '" alt="Awesome Product Image">\n' +
+      '                                    <img src="' + good.img + '" width="200" height="180" alt="Awesome Product Image">\n' +
       '                                    <div class="overlay-box">\n' +
       '                                        <div class="box">\n' +
       '                                            <div class="content">\n' +
