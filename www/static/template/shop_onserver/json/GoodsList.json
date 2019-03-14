@@ -2,19 +2,19 @@
   {
     "id": "1",
     "img": "images/shop/1.jpg",
-    "info": "钢管大棚",
-    "type": "钢管大棚"
+    "info": "连栋大棚",
+    "type": "连栋大棚"
   },
   {
     "id": "2",
     "img": "images/shop/2.jpg",
-    "info": "蔬菜大棚",
-    "type": "蔬菜大棚"
+    "info": "拱形大棚",
+    "type": "拱形大棚"
   },
   {
     "id": "3",
     "img": "images/shop/3.jpg",
-    "info": "钢管大棚",
-    "type": "钢管大棚"
+    "info": "蔬菜大棚",
+    "type": "蔬菜大棚"
   }
 ]

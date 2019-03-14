@@ -295,7 +295,6 @@ function timepicker() {
 function shopList() {
   var list = $('#list');
   var contentGoods = $('#contentGoods');
-
   contentGoods.empty();
   $.getJSON("./json/GoodsList.json",function (data) {
     var goods = data ||[];
@@ -304,9 +303,10 @@ function shopList() {
     });
     list.on('click', 'li', function() {
       var type = $(this).attr('data-title');
-      var select = $('.goodsList[data-type=' + type + ']');
-      select.show().siblings('.goodsList');
+      var select = $('[data-type="' + type + '"]');
+      select.show().siblings('.goodsList').hide();
     });
+    list.find('li:eq(0)').trigger('click');
   });
 
 
