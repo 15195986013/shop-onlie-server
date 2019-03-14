@@ -293,7 +293,7 @@ function timepicker() {
 }
 
 function shopList() {
-  var li = $('.categories.clearfix');
+  var list = $('#list');
   var contentGoods = $('#contentGoods');
 
   contentGoods.empty();
@@ -302,7 +302,7 @@ function shopList() {
     goods.forEach(function (good, index) {
       contentGoods.append(getGoodInfo(good));
     });
-    li.on('click', 'li', function() {
+    list.on('click', 'li', function() {
       var type = $(this).attr('data-title');
       var select = $('.goodsList[data-type=' + type + ']');
       select.show().siblings('.goodsList');
