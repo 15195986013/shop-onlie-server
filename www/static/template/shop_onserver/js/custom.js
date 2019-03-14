@@ -303,6 +303,9 @@ function shopList() {
       contentGoods.append(getGoodInfo(good));
     });
     li.on('click', 'li', function() {
+      var type = $(this).attr('data-title');
+      var select = $('.goodsList[data-type=' + type + ']');
+      select.show().siblings('.goodsList');
     });
   });
 
@@ -311,14 +314,14 @@ function shopList() {
 
 function getGoodInfo(good) {
 
-  var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12">\n' +
+  var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type='+good.type+'>\n' +
       '                            <div class="single-product-item">\n' +
       '                                <div class="img-holder">\n' +
       '                                    <img src="'+good.img+'" alt="Awesome Product Image">\n' +
       '                                    <div class="overlay-box">\n' +
       '                                        <div class="box">\n' +
       '                                            <div class="content">\n' +
-      '                                                <a class="thm-btn bg-1" href="shop-single.html">查看详情</a>\n' +
+      '                                                <a class="thm-btn bg-1" href="shop-single.html?id='+good.id+'"">查看详情</a>\n' +
       '                                            </div>\n' +
       '                                        </div>\n' +
       '                                    </div>\n' +
