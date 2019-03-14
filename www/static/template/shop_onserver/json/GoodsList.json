@@ -72,9 +72,111 @@
     "type": "拱形大棚"
   },
   {
-    "id": "3",
-    "img": "images/shop/3.jpg",
+    "id": "31",
+    "img": "images/shop/31.jpg",
     "info": "蔬菜大棚",
     "type": "蔬菜大棚"
+  },
+  {
+    "id": "32",
+    "img": "images/shop/32.jpg",
+    "info": "蔬菜大棚",
+    "type": "蔬菜大棚"
+  },
+  {
+    "id": "33",
+    "img": "images/shop/33.jpg",
+    "info": "蔬菜大棚",
+    "type": "蔬菜大棚"
+  },
+  {
+    "id": "34",
+    "img": "images/shop/34.jpg",
+    "info": "蔬菜大棚",
+    "type": "蔬菜大棚"
+  },
+  {
+    "id": "35",
+    "img": "images/shop/35.jpg",
+    "info": "蔬菜大棚",
+    "type": "蔬菜大棚"
+  },
+  {
+    "id": "36",
+    "img": "images/shop/36.jpg",
+    "info": "蔬菜大棚",
+    "type": "蔬菜大棚"
+  },
+  {
+    "id": "41",
+    "img": "images/shop/41.jpg",
+    "info": "花卉大棚",
+    "type": "花卉大棚"
+  },
+  {
+    "id": "42",
+    "img": "images/shop/42.jpg",
+    "info": "花卉大棚",
+    "type": "花卉大棚"
+  },
+  {
+    "id": "43",
+    "img": "images/shop/43.jpg",
+    "info": "花卉大棚",
+    "type": "花卉大棚"
+  },
+  {
+    "id": "44",
+    "img": "images/shop/44.jpg",
+    "info": "花卉大棚",
+    "type": "花卉大棚"
+  },
+  {
+    "id": "45",
+    "img": "images/shop/45.jpg",
+    "info": "花卉大棚",
+    "type": "花卉大棚"
+  },
+  {
+    "id": "46",
+    "img": "images/shop/46.jpg",
+    "info": "花卉大棚",
+    "type": "花卉大棚"
+  },
+  {
+    "id": "51",
+    "img": "images/shop/51.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "52",
+    "img": "images/shop/52.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "53",
+    "img": "images/shop/53.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "54",
+    "img": "images/shop/54.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "55",
+    "img": "images/shop/55.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "56",
+    "img": "images/shop/56.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
   }
 ]
