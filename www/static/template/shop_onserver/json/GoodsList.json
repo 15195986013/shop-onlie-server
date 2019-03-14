@@ -146,36 +146,72 @@
   {
     "id": "51",
     "img": "images/shop/51.jpg",
-    "info": "养殖大棚",
-    "type": "养殖大棚"
+    "info": "温室配件",
+    "type": "温室配件"
   },
   {
     "id": "52",
     "img": "images/shop/52.jpg",
-    "info": "养殖大棚",
-    "type": "养殖大棚"
+    "info": "温室配件",
+    "type": "温室配件"
   },
   {
     "id": "53",
     "img": "images/shop/53.jpg",
-    "info": "养殖大棚",
-    "type": "养殖大棚"
+    "info": "温室配件",
+    "type": "温室配件"
   },
   {
     "id": "54",
     "img": "images/shop/54.jpg",
-    "info": "养殖大棚",
-    "type": "养殖大棚"
+    "info": "温室配件",
+    "type": "温室配件"
   },
   {
     "id": "55",
     "img": "images/shop/55.jpg",
-    "info": "养殖大棚",
-    "type": "养殖大棚"
+    "info": "温室配件",
+    "type": "温室配件"
   },
   {
     "id": "56",
     "img": "images/shop/56.jpg",
+    "info": "温室配件",
+    "type": "温室配件"
+  },
+  {
+    "id": "61",
+    "img": "images/shop/61.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "62",
+    "img": "images/shop/62.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "63",
+    "img": "images/shop/63.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "64",
+    "img": "images/shop/64.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "65",
+    "img": "images/shop/65.jpg",
+    "info": "养殖大棚",
+    "type": "养殖大棚"
+  },
+  {
+    "id": "66",
+    "img": "images/shop/66.jpg",
     "info": "养殖大棚",
     "type": "养殖大棚"
   }
