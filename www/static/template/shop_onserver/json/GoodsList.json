@@ -36,8 +36,38 @@
     "type": "连栋大棚"
   },
   {
-    "id": "2",
-    "img": "images/shop/2.jpg",
+    "id": "21",
+    "img": "images/shop/21.jpg",
+    "info": "拱形大棚",
+    "type": "拱形大棚"
+  },
+  {
+    "id": "22",
+    "img": "images/shop/22.jpg",
+    "info": "拱形大棚",
+    "type": "拱形大棚"
+  },
+  {
+    "id": "23",
+    "img": "images/shop/23.jpg",
+    "info": "拱形大棚",
+    "type": "拱形大棚"
+  },
+  {
+    "id": "24",
+    "img": "images/shop/24.jpg",
+    "info": "拱形大棚",
+    "type": "拱形大棚"
+  },
+  {
+    "id": "25",
+    "img": "images/shop/25.jpg",
+    "info": "拱形大棚",
+    "type": "拱形大棚"
+  },
+  {
+    "id": "26",
+    "img": "images/shop/26.jpg",
     "info": "拱形大棚",
     "type": "拱形大棚"
   },

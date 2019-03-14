@@ -314,7 +314,7 @@ function shopList() {
 }
 
 function getGoodInfo(good) {
-  var goodDom = '<div class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type=' + good.type + '>\n' +
+  var goodDom = '<div style="width:280px;height:320px;" class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type=' + good.type + '>\n' +
       '                            <div class="single-product-item">\n' +
       '                                <div class="img-holder">\n' +
       '                                    <img src="' + good.img + '" width="200" height="180" alt="Awesome Product Image">\n' +
