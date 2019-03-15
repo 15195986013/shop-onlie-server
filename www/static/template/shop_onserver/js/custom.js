@@ -312,7 +312,58 @@ function shopList() {
     list.find('li:eq(0)').trigger('click');
   });
 }
-
+function shopList() {
+  var list = $('#list');
+  var blogContainer = $('#blogContainer');
+  blogContainer.empty();
+  $.getJSON('./json/GoodsList.json', function(data) {
+    (data || []).forEach(function(bolg, index) {
+      blogContainer.append(getBolgInfo(bolg));
+    });
+    list.on('click', 'li', function() {
+    });
+    list.find('li:eq(0)').trigger('click');
+  });
+}
+function getBolgInfo(bolg) {
+  var blogDom = ' <div class="single-blog-item">\n' +
+      '                        <div class="img-holder">\n' +
+      '                            <img src="images/blog/1.jpg" alt="Awesome Image">\n' +
+      '                            <div class="overlay">\n' +
+      '                                <div class="box">\n' +
+      '                                    <div class="content">\n' +
+      '                                        <a href="blog-single.html"><i class="fa fa-link"></i></a>\n' +
+      '                                    </div>\n' +
+      '                                </div>\n' +
+      '                            </div>\n' +
+      '                        </div>\n' +
+      '                        <div class="text-holder">\n' +
+      '                            <div class="date-box">\n' +
+      '                                <h4>21 Aug</h4>\n' +
+      '                            </div>\n' +
+      '                            <div class="text-box">\n' +
+      '                                <a href="blog-single.html">\n' +
+      '                                    <h3 class="blog-title">'+bolg.title+'</h3>\n' +
+      '                                </a>\n' +
+      '                                <ul class="meta-info">\n' +
+      '                                    <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Mark Fletcher</a></li>\n' +
+      '                                    <li><i class="fa fa-tags" aria-hidden="true"></i><a href="#">Pin Number</a></li>\n' +
+      '                                    <li><i class="fa fa-eye" aria-hidden="true"></i><a href="#">55 Views</a></li>\n' +
+      '                                    <li><i class="fa fa-comments" aria-hidden="true"></i><a href="#">22 Comments</a></li>\n' +
+      '                                </ul>\n' +
+      '                                <div class="text">\n' +
+      '                                    <p>'+bolg.desc+'</p>\n' +
+      '                                    <div class="bottom clearfix">\n' +
+      '                                        <div class="readmore pull-left">\n' +
+      '                                            <a href="blog-single.html?id='+bolg.id+'">阅读更多<i class="fa fa-caret-right" aria-hidden="true"></i></a>\n' +
+      '                                        </div>\n' +
+      '                                    </div>\n' +
+      '                                </div>\n' +
+      '                            </div>\n' +
+      '                        </div>\n' +
+      '                    </div>';
+  return $(blogDom);
+}
 function getGoodInfo(good) {
   var goodDom = '<div style="width:280px;height:320px;" class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type=' + good.type + '>\n' +
       '                            <div class="single-product-item">\n' +

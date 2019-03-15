@@ -1,0 +1,38 @@
+[
+  {
+    "id": "11",
+    "img": "images/shop/11.jpg",
+    "title": "连栋大棚",
+    "type": "连栋大棚"
+  },
+  {
+    "id": "12",
+    "img": "images/shop/12.jpg",
+    "title": "连栋大棚",
+    "type": "连栋大棚"
+  },
+  {
+    "id": "13",
+    "img": "images/shop/13.jpg",
+    "title": "连栋大棚",
+    "type": "连栋大棚"
+  },
+  {
+    "id": "14",
+    "img": "images/shop/14.jpg",
+    "title": "连栋大棚",
+    "type": "连栋大棚"
+  },
+  {
+    "id": "15",
+    "img": "images/shop/15.jpg",
+    "title": "连栋大棚",
+    "type": "连栋大棚"
+  },
+  {
+    "id": "16",
+    "img": "images/shop/16.jpg",
+    "title": "连栋大棚",
+    "type": "连栋大棚"
+  }
+]
