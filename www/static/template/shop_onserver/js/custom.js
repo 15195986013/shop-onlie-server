@@ -415,7 +415,7 @@ function updateGoodInfo() {
             var good = data.filter(function (o) {
                 return o.id === id
             })[0];
-            $('#goodInfo').text(good.title);
+            $('.goodInfo').text(good.info);
             $('#imgGood').attr("src",good.img);
             $('#goodDesc').text(good.info);
         });
