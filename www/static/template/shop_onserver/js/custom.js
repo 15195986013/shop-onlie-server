@@ -27,7 +27,20 @@
 'use strict';
 
 // ===RevolutionSliderActiver===
-
+function lazyLoadImg() {
+    var n = 0,
+        imgNum = $("img").length,
+        img = $('img');
+    for (var i = n; i < imgNum; i++) {
+        if (img.eq(i).offset().top < parseInt($(window).height()) + parseInt($(window).scrollTop())) {
+            if (img.eq(i).attr("src") == "images/resources/default.jpg") {
+                var src = img.eq(i).attr("data-src");
+                img.eq(i).attr("src", src);
+                n = i + 1;
+            }
+        }
+    }
+}
 
 function GetQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
@@ -403,11 +416,12 @@ function updateBlogInfo() {
                 return o.id === id
             })[0];
             $('#titleBlog').text(blogInfo.title);
-            $('#imgBlog').attr("src",blogInfo.img);
+            $('#imgBlog').attr("src", blogInfo.img);
             $('#descBlog').text(blogInfo.desc);
         });
     }
 }
+
 function updateGoodInfo() {
     var id = GetQueryString("id");
     if (id) {
@@ -416,11 +430,12 @@ function updateGoodInfo() {
                 return o.id === id
             })[0];
             $('.goodInfo').text(good.info);
-            $('#imgGood').attr("src",good.img);
+            $('#imgGood').attr("src", good.img);
             $('#goodDesc').text(good.info);
         });
     }
 }
+
 // Contact Form Validation
 if ($('#contact-form').length) {
     $('#contact-form').validate({
@@ -451,31 +466,33 @@ if ($('#contact-form').length) {
 // Dom Ready Function
 $(function () {
     // (function ($) {
-        // add your functions
-        revolutionSliderActiver();
-        mainmenu();
-        languageSwitcher();
-        brandCarousel();
-        testimonialSlider();
-        scrollToTop();
-        prettyPhoto();
-        CounterNumberChanger();
-        accordion();
-        cartTouchSpin();
-        selectDropdown();
-        priceFilter();
-        datepicker();
-        timepicker();
-        shopList();
-        blogList();
-        updateBlogInfo();
-        updateGoodInfo();
+    // add your functions
+    revolutionSliderActiver();
+    mainmenu();
+    languageSwitcher();
+    brandCarousel();
+    testimonialSlider();
+    scrollToTop();
+    prettyPhoto();
+    CounterNumberChanger();
+    accordion();
+    cartTouchSpin();
+    selectDropdown();
+    priceFilter();
+    datepicker();
+    timepicker();
+    shopList();
+    blogList();
+    updateBlogInfo();
+    updateGoodInfo();
+    lazyLoadImg();
     // })(jQuery);
 });
 
 jQuery(window).on('scroll', function () {
     (function ($) {
         stickyHeader();
+        lazyLoadImg();
     })(jQuery);
 });
 
