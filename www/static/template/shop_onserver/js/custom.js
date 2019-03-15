@@ -330,7 +330,7 @@ function getBolgInfo(bolg) {
         '                            <div class="overlay">\n' +
         '                                <div class="box">\n' +
         '                                    <div class="content">\n' +
-        '                                        <a href="blog-single.html?id=' + bolg.id + '""><i class="fa fa-link"></i></a>\n' +
+        '                                        <a target="_blank" href="blog-single.html?id=' + bolg.id + '""><i class="fa fa-link"></i></a>\n' +
         '                                    </div>\n' +
         '                                </div>\n' +
         '                            </div>\n' +
@@ -340,14 +340,14 @@ function getBolgInfo(bolg) {
         '                                <h4>' + bolg.time + '</h4>\n' +
         '                            </div>\n' +
         '                            <div class="text-box">\n' +
-        '                                <a href="blog-single.html?id=' + bolg.id + '"">\n' +
+        '                                <a target="_blank" href="blog-single.html?id=' + bolg.id + '"">\n' +
         '                                    <h3 class="blog-title">' + bolg.title + '</h3>\n' +
         '                                </a>\n' +
         '                                <div class="text">\n' +
         '                                    <p>' + bolg.desc + '</p>\n' +
         '                                    <div class="bottom clearfix">\n' +
         '                                        <div class="readmore pull-left">\n' +
-        '                                            <a href="blog-single.html?id=' + bolg.id + '">阅读更多<i class="fa fa-caret-right" aria-hidden="true"></i></a>\n' +
+        '                                            <a target="_blank" href="blog-single.html?id=' + bolg.id + '">阅读更多<i class="fa fa-caret-right" aria-hidden="true"></i></a>\n' +
         '                                        </div>\n' +
         '                                    </div>\n' +
         '                                </div>\n' +
@@ -365,7 +365,7 @@ function getGoodInfo(good) {
         '                                    <div class="overlay-box">\n' +
         '                                        <div class="box">\n' +
         '                                            <div class="content">\n' +
-        '                                                <a class="thm-btn bg-1" href="shop-single.html?id=' + good.id + '"">查看详情</a>\n' +
+        '                                                <a class="thm-btn bg-1" target="_blank" href="shop-single.html?id=' + good.id + '">查看详情</a>\n' +
         '                                            </div>\n' +
         '                                        </div>\n' +
         '                                    </div>\n' +
@@ -373,7 +373,7 @@ function getGoodInfo(good) {
         '                                <div class="title-holder">\n' +
         '                                    <div class="top clearfix">\n' +
         '                                        <div class="product-title pull-left">\n' +
-        '                                            <a href="shop-single.html">\n' +
+        '                                            <a target="_blank" href="shop-single.html?id=' + good.id + '">\n' +
         '                                                <h5>' + good.info + '</h5>\n' +
         '                                            </a>\n' +
         '                                        </div>\n' +
