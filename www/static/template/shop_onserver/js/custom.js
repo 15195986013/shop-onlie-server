@@ -408,7 +408,19 @@ function updateBlogInfo() {
         });
     }
 }
-
+function updateGoodInfo() {
+    var id = GetQueryString("id");
+    if (id) {
+        $.getJSON('./json/GoodsList.json', function (data) {
+            var good = data.filter(function (o) {
+                return o.id === id
+            })[0];
+            $('#goodInfo').text(good.title);
+            $('#imgGood').attr("src",good.img);
+            $('#goodDesc').text(good.info);
+        });
+    }
+}
 // Contact Form Validation
 if ($('#contact-form').length) {
     $('#contact-form').validate({
@@ -457,6 +469,7 @@ jQuery(document).on('ready', function () {
         shopList();
         blogList();
         updateBlogInfo();
+        updateGoodInfo();
     })(jQuery);
 });
 
