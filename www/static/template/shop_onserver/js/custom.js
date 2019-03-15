@@ -328,7 +328,7 @@ function blogList() {
 function getBolgInfo(bolg) {
   var blogDom = ' <div class="single-blog-item">\n' +
       '                        <div class="img-holder">\n' +
-      '                            <img src="images/blog/1.jpg" alt="Awesome Image">\n' +
+      '                            <img src="'+bolg.img+'" alt="Awesome Image">\n' +
       '                            <div class="overlay">\n' +
       '                                <div class="box">\n' +
       '                                    <div class="content">\n' +
