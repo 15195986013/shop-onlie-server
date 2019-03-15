@@ -339,7 +339,7 @@ function blogList() {
 function getBolgInfo(bolg) {
     var blogDom = ' <div class="single-blog-item">\n' +
         '                        <div class="img-holder">\n' +
-        '                            <img src="' + bolg.img + '" alt="Awesome Image">\n' +
+        '                            <img src="images/resources/default.jpg"  data-src="' + bolg.img + '" alt="Awesome Image">\n' +
         '                            <div class="overlay">\n' +
         '                                <div class="box">\n' +
         '                                    <div class="content">\n' +
@@ -374,7 +374,7 @@ function getGoodInfo(good) {
     var goodDom = '<div style="width:280px;height:320px;" class="col-md-4 col-sm-4 col-xs-12 goodsList" data-type=' + good.type + '>\n' +
         '                            <div class="single-product-item">\n' +
         '                                <div class="img-holder">\n' +
-        '                                    <img src="' + good.img + '" width="200" height="180" alt="Awesome Product Image">\n' +
+        '                                    <img src="images/resources/default.jpg" data-src="' + good.img + '" width="200" height="180" alt="Awesome Product Image">\n' +
         '                                    <div class="overlay-box">\n' +
         '                                        <div class="box">\n' +
         '                                            <div class="content">\n' +
