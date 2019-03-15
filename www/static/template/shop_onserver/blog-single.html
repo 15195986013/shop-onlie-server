@@ -82,8 +82,8 @@
                             <li><a href="about.html">关于我们</a></li>
                             <li class="dropdown"><a href="shop.html">产品中心</a>
                             </li>
-                            <li><a href="blog.html">行业动态</a></li>
-                            <li class="current"><a href="contact.html">联系我们</a></li>
+                            <li class="current"><a href="blog.html">行业动态</a></li>
+                            <li ><a href="contact.html">联系我们</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -119,7 +119,7 @@
 <!--Start breadcrumb area-->
 <section class="breadcrumb-area">
     <div class="container text-center">
-        <h1>联系我们</h1>
+        <h1>动态详情</h1>
     </div>
 </section>
 <!--End breadcrumb area-->
@@ -131,10 +131,9 @@
             <ul>
                 <li><a href="index.html">网站首页</a></li>
                 <li><i class="fa fa-caret-right" aria-hidden="true"></i></li>
-                <li>联系我们</li>
+                <li></li>
             </ul>
         </div>
-
     </div>
 </section>
 <!--End breadcrumb bottom area-->
@@ -151,68 +150,6 @@
                     <div class="accordion-box">
                         <!--Start single accordion box-->
                         <div class="accordion accordion-block">
-                            <div class="accord-btn active"><h4>办公地址</h4></div>
-                            <div class="accord-content collapsed">
-                                <ul class="contact-info-list">
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-home-page"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>街道</span><br> *** 位置 </h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-call-answer"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>电话联系</span><br>18505266333</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-envelope"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>电子邮箱</span><br>18505266333@qq.com</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--End single accordion box-->
-                        <!--Start single accordion box-->
-                        <div class="accordion accordion-block">
-                            <div class="accord-btn"><h4>原始办公</h4></div>
-                            <div class="accord-content collapsed">
-                                <ul class="contact-info-list">
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-home-page"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>街道</span><br> *** 位置 </h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-call-answer"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>电话联系</span><br>18505266333</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-envelope"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>电子邮箱</span><br>18505266333@qq.com</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                         <!--End single accordion box-->
                     </div>
@@ -220,187 +157,16 @@
             </div>
             <div class="col-md-8">
                 <div class="contact-form">
-                    <div class="title">
-                        <h2>联系详情</h2>
-                    </div>
-                    <form id="contact-form" name="contact_form" class="default-form" action="inc/sendmail.php"
-                          method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_name" value="" placeholder="你的名字" required="">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" name="form_email" value="" placeholder="Your Mail*" required="">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <input type="text" name="form_phone" value="" placeholder="Phone">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" name="form_subject" value="" placeholder="Subject">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <textarea name="form_message" placeholder="Your Message.." required=""></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden"
-                                       value="">
-                                <button class="thm-btn bg-1" type="submit" data-loading-text="加载中...">
-发送
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--End contact area-->
-
-<!--Start Google map area-->
-<section class="google-map-area">
-    <div
-            class="google-map"
-            id="contact-google-map" style="display:none;"
-            data-map-lat="23.810332"
-            data-map-lng="90.412518"
-            data-icon-path="images/resources/map-marker.png"
-            data-map-title="Brooklyn, New York, United Kingdom"
-            data-map-zoom="12"
-            data-markers='{
-            "marker-1": [23.810332, 90.412518, "<h4>Head Office</h4><p>44/108 Dhaka, Bangladesh</p>"],
-            "marker-2": [23.822349, 90.365420, "<h4>Branch Office</h4><p>77/99 Mirpur Dhaka Bangladesh</p>","images/resources/map-marker.png"]
-        }'>
-
-    </div>
-</section>
-<!--End Google map area-->
-
 <!--Start footer area-->
 <footer class="footer-area">
     <div class="container">
-        <div class="row"  style="display:none;">
-            <!--Start single footer widget-->
-            <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12">
-                <div class="single-footer-widget pd-bottom">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="images/footer/footer-logo.png" alt="Awesome Footer Logo">
-                        </a>
-                    </div>
-                    <div class="repairplus-info">
-                        <p class="top">Repairplus brings 41 years of Digital Repairs experience right to your Device.
-                            Our Texhnicians are equipped to help you that work best.</p>
-                        <p>Our commitment to bring professionalism, good service & trust to the Phone repair service &
-                            maintenance business.</p>
-                        <div class="button">
-                            <a class="thm-btn bg-1" href="#">Purchase theme</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End single footer widget-->
-            <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
-                <div class="footer-widget">
-                    <div class="row">
-                        <!--Start single footer widget-->
-                        <div class="col-lg-3 col-md-4 col-sm-12">
-                            <div class="single-footer-widget">
-                                <div class="title">
-                                    <h3>Our 我们的服务</h3>
-                                </div>
-                                <ul class="services-list">
-                                    <li><a href="smartphone-repair.html">连栋大棚</a></li>
-                                    <li><a href="tablet-repair.html">拱形大棚</a></li>
-                                    <li><a href="desktop-repair.html">花卉大棚</a></li>
-                                    <li><a href="game-repair.html">蔬菜大棚</a></li>
-                                    <li><a href="lcd-repair.html">养殖大棚</a></li>
-                                    <li><a href="mp3-repair.html">大棚配件</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--Start single footer widget-->
-                        <!--Start single footer widget-->
-                        <div class="col-lg-5 col-md-4 col-sm-12">
-                            <div class="single-footer-widget subscribe-form-widget">
-                                <div class="title">
-                                    <h3>Subscribe US</h3>
-                                </div>
-                                <div class="subscribe-form">
-                                    <p>Subscribe to our newsletter!</p>
-                                    <form action="#">
-                                        <input name="email" placeholder="Enter Your Email..." type="text">
-                                        <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                        </button>
-                                    </form>
-                                    <h4>We don’t do mail to spam and your mail id is confidential.</h4>
-                                </div>
-                                <div class="footer-social-links">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!--End single footer widget-->
-                        <!--Start single footer widget-->
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <div class="single-footer-widget contact-info-widget">
-                                <div class="title">
-                                    <h3>联系我们 Info</h3>
-                                </div>
-                                <ul class="footer-contact-info">
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-home-page"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>32, Breaking Street,</span><br> 2nd cros, Newyork ,USA 10002</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-call-answer"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Call Us</span><br>+321 4567 89 012 & 79 023</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-envelope"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Mail Us</span><br>Support@Repairplus.com</h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="icon-holder">
-                                            <span class="flaticon-clock"></span>
-                                        </div>
-                                        <div class="text-holder">
-                                            <h5><span>Opening Time</span><br>Mon - Sat: 09.00am to 18.00pm</h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--End single footer widget-->
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--Start footer botton-->
         <div class="row">
             <div class="col-md-12">
@@ -410,8 +176,6 @@
                                 href="http://www.cssmoban.com/" title="南京稻壳网络科技有限公司" target="_blank">南京稻壳网络科技有限公司</a>
                         </p>
                     </div>
-
-
                 </div>
             </div>
         </div>
