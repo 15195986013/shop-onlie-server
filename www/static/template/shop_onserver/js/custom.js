@@ -449,8 +449,8 @@ if ($('#contact-form').length) {
 }
 
 // Dom Ready Function
-jQuery(document).on('ready', function () {
-    (function ($) {
+$(function () {
+    // (function ($) {
         // add your functions
         revolutionSliderActiver();
         mainmenu();
@@ -470,7 +470,7 @@ jQuery(document).on('ready', function () {
         blogList();
         updateBlogInfo();
         updateGoodInfo();
-    })(jQuery);
+    // })(jQuery);
 });
 
 jQuery(window).on('scroll', function () {
