@@ -312,11 +312,11 @@ function shopList() {
     list.find('li:eq(0)').trigger('click');
   });
 }
-function shopList() {
+function blogList() {
   var list = $('#list');
   var blogContainer = $('#blogContainer');
   blogContainer.empty();
-  $.getJSON('./json/GoodsList.json', function(data) {
+  $.getJSON('./json/BlogsList.json', function(data) {
     (data || []).forEach(function(bolg, index) {
       blogContainer.append(getBolgInfo(bolg));
     });
@@ -339,18 +339,12 @@ function getBolgInfo(bolg) {
       '                        </div>\n' +
       '                        <div class="text-holder">\n' +
       '                            <div class="date-box">\n' +
-      '                                <h4>21 Aug</h4>\n' +
+      '                                <h4>'+bolg.time+'</h4>\n' +
       '                            </div>\n' +
       '                            <div class="text-box">\n' +
       '                                <a href="blog-single.html">\n' +
       '                                    <h3 class="blog-title">'+bolg.title+'</h3>\n' +
       '                                </a>\n' +
-      '                                <ul class="meta-info">\n' +
-      '                                    <li><i class="fa fa-user" aria-hidden="true"></i><a href="#">Mark Fletcher</a></li>\n' +
-      '                                    <li><i class="fa fa-tags" aria-hidden="true"></i><a href="#">Pin Number</a></li>\n' +
-      '                                    <li><i class="fa fa-eye" aria-hidden="true"></i><a href="#">55 Views</a></li>\n' +
-      '                                    <li><i class="fa fa-comments" aria-hidden="true"></i><a href="#">22 Comments</a></li>\n' +
-      '                                </ul>\n' +
       '                                <div class="text">\n' +
       '                                    <p>'+bolg.desc+'</p>\n' +
       '                                    <div class="bottom clearfix">\n' +
@@ -447,6 +441,7 @@ jQuery(document).on('ready', function() {
     datepicker();
     timepicker();
     shopList();
+    blogList();
   })(jQuery);
 });
 
