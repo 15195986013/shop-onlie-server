@@ -28,7 +28,7 @@ module.exports = class extends Base {
       hotGoodsList: hotGoods, //热门商品
       brandList: brandList,//轮播
       topicList: topicList,//热门话题
-      categoryList: newCategoryList
+      categoryList: newCategoryList // 推荐商品
     });
   }
 };
