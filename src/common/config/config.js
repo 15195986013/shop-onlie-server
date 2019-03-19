@@ -4,9 +4,9 @@ module.exports = {
   weixin: {
     // appid: 'wx7ed04fb004ff7d94', // 小程序 appid
     // secret: '137a959a46a9409d1649f6d15ab33fd4', // 小程序密钥
-    appid: 'wxd34c524990b7fcd0', // 小程序  appid
-    secret: 'd7508915de57ff04e24873cf91d27f37', // 小程序密钥
-    mch_id: '', // 商户帐号ID
+    appid: 'wx4c5f27bf70a4cc63', // 小程序  appid
+    secret: '2fbaf30a721e9be88d681fef79e14bb2', // 小程序密钥
+    mch_id: '1528731491', // 商户帐号ID
     partner_key: '', // 微信支付密钥
     notify_url: '' // 微信异步通知，例：https://www.nideshop.com/api/pay/notify
   },
