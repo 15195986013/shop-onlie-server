@@ -16,9 +16,10 @@ module.exports = class extends Base {
     if (think.isEmpty(userId)) {
       // 注册
       userId = await this.model('user').add({
+        id: think.uuid("v4").replace(/-/g,''),
         username: '微信用户' + think.uuid(6),
         password: '',
-        register_time: parseInt(new Date().getTime() / 1000),
+        register_time:['exp', 'CURRENT_TIMESTAMP()'],
         register_ip: clientIp,
         mobile: '',
         weixin_openid: userInfo.openId,
@@ -33,13 +34,13 @@ module.exports = class extends Base {
 
     // 更新登录信息
     userId = await this.model('user').where({ id: userId }).update({
-      last_login_time: parseInt(new Date().getTime() / 1000),
+      last_login_time: ['exp', 'CURRENT_TIMESTAMP()'],
       last_login_ip: clientIp
     });
 
     const TokenSerivce = this.service('token', 'api');
     const sessionKey = await TokenSerivce.create({ user_id: userId });
-  
+
     if (think.isEmpty(newUserInfo) || think.isEmpty(sessionKey)) {
       return this.fail('登录失败');
     }
