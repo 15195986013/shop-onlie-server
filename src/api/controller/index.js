@@ -22,13 +22,13 @@ module.exports = class extends Base {
     }
 
     return this.success({
-      banner: banner,
-      channel: channel,
-      newGoodsList: newGoods,
-      hotGoodsList: hotGoods,
-      brandList: brandList,
-      topicList: topicList,
-      categoryList: newCategoryList
+      banner: banner,// 广告
+      channel: channel,//分类
+      newGoodsList: newGoods,//新品
+      hotGoodsList: hotGoods, //热门商品
+      brandList: brandList,//轮播
+      topicList: topicList,//热门话题
+      categoryList: newCategoryList // 推荐商品
     });
   }
 };
