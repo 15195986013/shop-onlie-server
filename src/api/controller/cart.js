@@ -150,6 +150,7 @@ module.exports = class extends Base {
       }
 
       const cartData = {
+        id: think.uuid("v4").replace(/-/g,''),
         number: number,
         goods_specifition_name_value: JSON.stringify(goodsSepcifition),
         goods_specifition_ids: productInfo.goods_specification_ids,
@@ -171,6 +172,7 @@ module.exports = class extends Base {
       await this.model('cart').where({id: newCartInfo.id}).delete();
 
       const cartData = {
+        id: think.uuid("v4").replace(/-/g,''),
         number: newNumber,
         goods_specifition_name_value: newCartInfo.goods_specifition_name_value,
         goods_specifition_ids: newCartInfo.goods_specification_ids,
