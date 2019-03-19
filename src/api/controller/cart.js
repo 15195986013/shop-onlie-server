@@ -80,6 +80,7 @@ module.exports = class extends Base {
 
       // 添加到购物车
       const cartData = {
+        id: think.uuid("v4").replace(/-/g, ''),
         goods_id: goodsId,
         product_id: productId,
         goods_sn: productInfo.goods_sn,
