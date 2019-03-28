@@ -20,6 +20,8 @@ module.exports = class extends Base {
     if (think.isEmpty(openid)) {
       return this.fail('微信支付失败');
     }
+    // todo 需要测试一下支付接口
+    orderInfo.actual_price= 0.1;
     const WeixinSerivce = this.service('weixin', 'api');
     try {
       const returnParams = await WeixinSerivce.createUnifiedOrder({
