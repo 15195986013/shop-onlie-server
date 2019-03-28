@@ -138,14 +138,15 @@ module.exports = class extends Base {
     // 开启事务，插入订单信息和订单商品
     const orderId = await this.model('order').add(orderInfo);
     orderInfo.id = orderId;
-    if (!orderId) {
-      return this.fail('订单提交失败');
-    }
+    // if (!orderId) {
+    //   return this.fail('订单提交失败');
+    // }
 
     // 统计商品总价
     const orderGoodsData = [];
     for (const goodsItem of checkedGoodsList) {
       orderGoodsData.push({
+        id: think.uuid("v4").replace(/-/g,''),
         order_id: orderId,
         goods_id: goodsItem.goods_id,
         goods_sn: goodsItem.goods_sn,
