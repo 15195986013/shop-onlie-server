@@ -104,7 +104,7 @@ CREATE TABLE `nideshop_address` (
 
 LOCK TABLES `nideshop_address` WRITE;
 /*!40000 ALTER TABLE `nideshop_address` DISABLE KEYS */;
-INSERT INTO `nideshop_address` VALUES ('3','小明','1','1','20','233','2414','民族大道1号','13800008888',1);
+INSERT INTO `nideshop_address` VALUES ('3','李建成','1','1','11','110','1236','南京论之语网络科技有限公司','15195986013',1);
 /*!40000 ALTER TABLE `nideshop_address` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -341,7 +341,7 @@ CREATE TABLE `nideshop_collect` (
   `id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `user_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   `value_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
-  `add_time` int(11) unsigned DEFAULT '0',
+  `add_time` timestamp NULL DEFAULT NULL,
   `is_attention` tinyint(1) DEFAULT '0' COMMENT '是否是关注',
   `type_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   PRIMARY KEY (`id`) USING BTREE,
@@ -357,7 +357,6 @@ CREATE TABLE `nideshop_collect` (
 
 LOCK TABLES `nideshop_collect` WRITE;
 /*!40000 ALTER TABLE `nideshop_collect` DISABLE KEYS */;
-INSERT INTO `nideshop_collect` VALUES ('17','1','1181000',1495381237,0,'0'),('18','1','1015007',1495466325,0,'0'),('19','1','1152161',1495970357,0,'0'),('21','1','1156006',1497685421,0,'0'),('31','11','1011004',1500822827,0,'0'),('33','11','1015007',1500823262,0,'0'),('44','11','1134030',1500987695,0,'0'),('47','11','1009012',1500987979,0,'0');
 /*!40000 ALTER TABLE `nideshop_collect` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -509,6 +508,7 @@ CREATE TABLE `nideshop_footprint` (
 
 LOCK TABLES `nideshop_footprint` WRITE;
 /*!40000 ALTER TABLE `nideshop_footprint` DISABLE KEYS */;
+INSERT INTO `nideshop_footprint` VALUES ('302076f7be694b7788526effd15b0800','1','1015007','2019-03-29'),('4805b587ff4646ce80395d7db1558e09','1','1015007','2019-03-29'),('4c18e2e3454248859ae98c9a01b11969','1','1147048','2019-03-29'),('58a78f0facfe480a8b4072c1d2ef3ea0','1','1181000','2019-03-29'),('5ee5df7ade754213bfbe0f75c8213915','1','1147046','2019-03-29'),('64e4e12900844fe791219f30e1d10d41','1','1155000','2019-03-29'),('8b7129bb6ec244da8cc2032048a3fdde','1','1147048','2019-03-29'),('adb43b30dd5c456f9ba4007ec5a6ca2e','1','1147048','2019-03-29'),('bb30639ad46f409eb8b1e41a517377f4','1','1155000','2019-03-29');
 /*!40000 ALTER TABLE `nideshop_footprint` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -811,7 +811,6 @@ DROP TABLE IF EXISTS `nideshop_order_goods`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `nideshop_order_goods` (
   `id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `order_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   `goods_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   `goods_name` varchar(120) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '',
   `goods_sn` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '',
@@ -823,8 +822,8 @@ CREATE TABLE `nideshop_order_goods` (
   `is_real` tinyint(1) unsigned DEFAULT '0',
   `goods_specifition_ids` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '',
   `list_pic_url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '',
+  `order_id` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE,
-  KEY `order_id` (`order_id`) USING BTREE,
   KEY `goods_id` (`goods_id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1093,6 +1092,7 @@ CREATE TABLE `nideshop_user` (
 
 LOCK TABLES `nideshop_user` WRITE;
 /*!40000 ALTER TABLE `nideshop_user` DISABLE KEYS */;
+INSERT INTO `nideshop_user` VALUES ('a7b9a4bad193497d9bad53aa31aa2d48','微信用户39958bbf-1754-4892-8956-24f2e62a748b','',1,NULL,'2019-03-29','2019-03-29','::ffff:127.0.0.1','0','李先生的猫','','::ffff:127.0.0.1','https://wx.qlogo.cn/mmopen/vi_32/fqBvy1zeMK3mcbzh3OLzrPzFuaayzb38VE39kgibJ6ia1TPxJKPsewWXwibpJZTibkeEnAOicYvKCe4ceEtI8v8Smgw/132','o2Ivc4tyAXrmV_r4LRmoq1od2lNQ');
 /*!40000 ALTER TABLE `nideshop_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1159,4 +1159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-29 20:13:03
+-- Dump completed on 2019-03-29 23:16:12

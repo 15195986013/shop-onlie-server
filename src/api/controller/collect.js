@@ -27,10 +27,11 @@ module.exports = class extends Base {
     if (think.isEmpty(collect)) {
       // 添加收藏
       collectRes = await this.model('collect').add({
+        id:think.uuid("v4").replace(/-/g,''),
         type_id: typeId,
         value_id: valueId,
         user_id: this.getLoginUserId(),
-        add_time: parseInt(new Date().getTime() / 1000)
+        add_time: ['exp', 'CURRENT_TIMESTAMP()']
       });
     } else {
       // 取消收藏

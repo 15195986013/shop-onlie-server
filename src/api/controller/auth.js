@@ -11,12 +11,14 @@ module.exports = class extends Base {
       return this.fail('登录失败');
     }
 
+    let uuid =  think.uuid("v4").replace(/-/g,'');
     // 根据openid查找用户是否已经注册
     let userId = await this.model('user').where({ weixin_openid: userInfo.openId }).getField('id', true);
+
     if (think.isEmpty(userId)) {
       // 注册
       userId = await this.model('user').add({
-        id: think.uuid("v4").replace(/-/g,''),
+        id: uuid,
         username: '微信用户' + think.uuid(6),
         password: '',
         register_time:['exp', 'CURRENT_TIMESTAMP()'],
