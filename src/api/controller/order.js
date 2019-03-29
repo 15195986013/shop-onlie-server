@@ -7,11 +7,11 @@ module.exports = class extends Base {
    * @return {Promise} []
    */
   async listAction() {
-    const orderList = await this.model('order').where({ user_id: this.getLoginUserId() }).page(1, 10).countSelect();
+    const orderList = await this.model('order').where({user_id: this.getLoginUserId()}).page(1, 10).countSelect();
     const newOrderList = [];
     for (const item of orderList.data) {
       // 订单的商品
-      item.goodsList = await this.model('order_goods').where({ order_id: item.id }).select();
+      item.goodsList = await this.model('order_goods').where({order_id: item.id}).select();
       item.goodsCount = 0;
       item.goodsList.forEach(v => {
         item.goodsCount += v.number;
@@ -32,21 +32,21 @@ module.exports = class extends Base {
 
   async detailAction() {
     const orderId = this.get('orderId');
-    const orderInfo = await this.model('order').where({ user_id: this.getLoginUserId(), id: orderId }).find();
+    const orderInfo = await this.model('order').where({user_id: this.getLoginUserId(), id: orderId}).find();
 
     if (think.isEmpty(orderInfo)) {
       return this.fail('订单不存在');
     }
 
-    orderInfo.province_name = await this.model('region').where({ id: orderInfo.province }).getField('name', true);
-    orderInfo.city_name = await this.model('region').where({ id: orderInfo.city }).getField('name', true);
-    orderInfo.district_name = await this.model('region').where({ id: orderInfo.district }).getField('name', true);
+    orderInfo.province_name = await this.model('region').where({id: orderInfo.province}).getField('name', true);
+    orderInfo.city_name = await this.model('region').where({id: orderInfo.city}).getField('name', true);
+    orderInfo.district_name = await this.model('region').where({id: orderInfo.district}).getField('name', true);
     orderInfo.full_region = orderInfo.province_name + orderInfo.city_name + orderInfo.district_name;
 
     const latestExpressInfo = await this.model('order_express').getLatestOrderExpress(orderId);
     orderInfo.express = latestExpressInfo;
 
-    const orderGoods = await this.model('order_goods').where({ order_id: orderId }).select();
+    const orderGoods = await this.model('order_goods').where({order_id: orderId}).select();
 
     // 订单状态的处理
     orderInfo.order_status_text = await this.model('order').getOrderStatusText(orderId);
@@ -78,14 +78,18 @@ module.exports = class extends Base {
   async submitAction() {
     // 获取收货地址信息和计算运费
     const addressId = this.post('addressId');
-    const checkedAddress = await this.model('address').where({ id: addressId }).find();
+    const checkedAddress = await this.model('address').where({id: addressId}).find();
     if (think.isEmpty(checkedAddress)) {
       return this.fail('请选择收货地址');
     }
     const freightPrice = 0.00;
 
     // 获取要购买的商品
-    const checkedGoodsList = await this.model('cart').where({ user_id: this.getLoginUserId(), session_id: 1, checked: 1 }).select();
+    const checkedGoodsList = await this.model('cart').where({
+      user_id: this.getLoginUserId(),
+      session_id: 1,
+      checked: 1
+    }).select();
     if (think.isEmpty(checkedGoodsList)) {
       return this.fail('请选择商品');
     }
@@ -109,7 +113,7 @@ module.exports = class extends Base {
     const currentTime = ['exp', 'CURRENT_TIMESTAMP()'];
 
     const orderInfo = {
-      id: think.uuid("v4").replace(/-/g,''),
+      id: think.uuid('v4').replace(/-/g, ''),
       order_sn: this.model('order').generateOrderNumber(),
       user_id: this.getLoginUserId(),
 
@@ -146,7 +150,7 @@ module.exports = class extends Base {
     const orderGoodsData = [];
     for (const goodsItem of checkedGoodsList) {
       orderGoodsData.push({
-        id: think.uuid("v4").replace(/-/g,''),
+        id: think.uuid('v4').replace(/-/g, ''),
         order_id: orderId,
         goods_id: goodsItem.goods_id,
         goods_sn: goodsItem.goods_sn,
@@ -164,7 +168,7 @@ module.exports = class extends Base {
     await this.model('order_goods').addMany(orderGoodsData);
     await this.model('cart').clearBuyGoods(this.getLoginUserId());
 
-    return this.success({ orderInfo: orderInfo });
+    return this.success({orderInfo: orderInfo});
   }
 
   /**
@@ -178,5 +182,15 @@ module.exports = class extends Base {
     }
     const latestExpressInfo = await this.model('order_express').getLatestOrderExpress(orderId);
     return this.success(latestExpressInfo);
+  }
+
+  /**
+   * 取消订单
+   * @returns {Promise.<void>}
+   */
+  async cancelAction() {
+    const orderId = this.get('orderId');
+    let result = await this.model('order').delOrderAndGoods(orderId);
+    return this.success(result);
   }
 };
