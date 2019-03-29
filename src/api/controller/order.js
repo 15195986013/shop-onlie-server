@@ -50,7 +50,7 @@ module.exports = class extends Base {
 
     // 订单状态的处理
     orderInfo.order_status_text = await this.model('order').getOrderStatusText(orderId);
-    orderInfo.add_time = moment.unix(orderInfo.add_time).format('YYYY-MM-DD HH:mm:ss');
+    orderInfo.add_time = orderInfo.add_time;
     orderInfo.final_pay_time = moment('001234', 'Hmmss').format('mm:ss');
     // 订单最后支付时间
     if (orderInfo.order_status === 0) {
