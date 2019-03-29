@@ -31,7 +31,7 @@ module.exports = class extends Base {
         type_id: typeId,
         value_id: valueId,
         user_id: this.getLoginUserId(),
-        add_time: ['exp', 'CURRENT_TIMESTAMP()']
+        add_time: new Date()
       });
     } else {
       // 取消收藏
