@@ -341,7 +341,7 @@ CREATE TABLE `nideshop_collect` (
   `id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `user_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   `value_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
-  `add_time` timestamp NULL DEFAULT NULL,
+  `add_time` date DEFAULT NULL,
   `is_attention` tinyint(1) DEFAULT '0' COMMENT '是否是关注',
   `type_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   PRIMARY KEY (`id`) USING BTREE,
@@ -357,6 +357,7 @@ CREATE TABLE `nideshop_collect` (
 
 LOCK TABLES `nideshop_collect` WRITE;
 /*!40000 ALTER TABLE `nideshop_collect` DISABLE KEYS */;
+INSERT INTO `nideshop_collect` VALUES ('608f83937f2d49b1bf6dbcaa4b97e4fd','1','1147048','2019-04-02',0,'0');
 /*!40000 ALTER TABLE `nideshop_collect` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -497,7 +498,7 @@ CREATE TABLE `nideshop_footprint` (
   `id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `user_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
   `goods_id` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT '0',
-  `add_time` date DEFAULT NULL,
+  `add_time` mediumtext,
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -508,7 +509,7 @@ CREATE TABLE `nideshop_footprint` (
 
 LOCK TABLES `nideshop_footprint` WRITE;
 /*!40000 ALTER TABLE `nideshop_footprint` DISABLE KEYS */;
-INSERT INTO `nideshop_footprint` VALUES ('302076f7be694b7788526effd15b0800','1','1015007','2019-03-29'),('4805b587ff4646ce80395d7db1558e09','1','1015007','2019-03-29'),('4c18e2e3454248859ae98c9a01b11969','1','1147048','2019-03-29'),('58a78f0facfe480a8b4072c1d2ef3ea0','1','1181000','2019-03-29'),('5ee5df7ade754213bfbe0f75c8213915','1','1147046','2019-03-29'),('64e4e12900844fe791219f30e1d10d41','1','1155000','2019-03-29'),('8b7129bb6ec244da8cc2032048a3fdde','1','1147048','2019-03-29'),('adb43b30dd5c456f9ba4007ec5a6ca2e','1','1147048','2019-03-29'),('bb30639ad46f409eb8b1e41a517377f4','1','1155000','2019-03-29');
+INSERT INTO `nideshop_footprint` VALUES ('226c402055fa483a98bbe2ddc32817cf','1','1147048','2019-04-02 22:35:30'),('3dc5c5c7b29844e691bb0d2398c981e6','1','1147048','2019-04-02 22:28:36'),('827b591edcd948b9a7662b16b0fefdc4','1','1147048','2019-04-02 22:29:05'),('88c955259faa4e11a565a6bafdd02975','1','1147048','2019-04-02 22:35:42'),('a7fe5cdc607f4e6c9214abb81102c9d3','1','1147048','2019-04-02 22:36:36'),('b4fe2eead25d4287bf8b9e82d6a6e408','1','1125017','2019-04-02 22:34:53'),('c2c43fbf140c4a338091854fb3cb9ab7','1','1147046','2019-04-02 22:36:54'),('c304751fe3da4576ae42693513b3814d','1','1147046','2019-04-02 22:35:19'),('e1b40a31b53a4d3eaefeaffb9f2f7216','1','1147048','2019-04-02 22:37:29'),('f120254955e24d14b4827a25d00b18ff','1','1147048','2019-04-02 22:31:35');
 /*!40000 ALTER TABLE `nideshop_footprint` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -834,6 +835,7 @@ CREATE TABLE `nideshop_order_goods` (
 
 LOCK TABLES `nideshop_order_goods` WRITE;
 /*!40000 ALTER TABLE `nideshop_order_goods` DISABLE KEYS */;
+INSERT INTO `nideshop_order_goods` VALUES ('47e5f2caf5424cb9b8c26f7d0158e8b6','1147046','清新趣粉系列居家地毯 条纹间粉','1147046','226',1,599.00,599.00,'',0,'','http://yanxuan.nosdn.127.net/655d718df8107f8e7fd1dc6140e29039.png','0'),('e82d17a3cbaa4bf69dc56101a518dc59','1147048','简约知性系列居家地毯 蓝灰格','1147048','228',2,559.00,559.00,'',0,'','http://yanxuan.nosdn.127.net/fd7920a2eadd10fa10c0c03959a2abe0.png','0');
 /*!40000 ALTER TABLE `nideshop_order_goods` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1092,7 +1094,7 @@ CREATE TABLE `nideshop_user` (
 
 LOCK TABLES `nideshop_user` WRITE;
 /*!40000 ALTER TABLE `nideshop_user` DISABLE KEYS */;
-INSERT INTO `nideshop_user` VALUES ('a7b9a4bad193497d9bad53aa31aa2d48','微信用户39958bbf-1754-4892-8956-24f2e62a748b','',1,NULL,'2019-03-29','2019-03-29','::ffff:127.0.0.1','0','李先生的猫','','::ffff:127.0.0.1','https://wx.qlogo.cn/mmopen/vi_32/fqBvy1zeMK3mcbzh3OLzrPzFuaayzb38VE39kgibJ6ia1TPxJKPsewWXwibpJZTibkeEnAOicYvKCe4ceEtI8v8Smgw/132','o2Ivc4tyAXrmV_r4LRmoq1od2lNQ');
+INSERT INTO `nideshop_user` VALUES ('d04a039317474daa9de53a729ea30520','微信用户be41fbd4-79e7-4c06-9b7c-4e36e599f430','',1,NULL,'2019-04-02','2019-04-02','::ffff:127.0.0.1','0','李先生的猫','','::ffff:127.0.0.1','https://wx.qlogo.cn/mmopen/vi_32/fqBvy1zeMK3mcbzh3OLzrPzFuaayzb38VE39kgibJ6ia1TPxJKPsewWXwibpJZTibkeEnAOicYvKCe4ceEtI8v8Smgw/132','o2Ivc4tyAXrmV_r4LRmoq1od2lNQ');
 /*!40000 ALTER TABLE `nideshop_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1159,4 +1161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-03-29 23:16:12
+-- Dump completed on 2019-04-02 23:20:44
