@@ -32,20 +32,20 @@ module.exports = class extends Base {
     }
 
     // 查询用户信息
-    const newUserInfo = await this.model('user').field(['id', 'username', 'nickname', 'gender', 'avatar', 'birthday']).where({ id: userId }).find();
+    const newUserInfo = await this.model('user').field(['id', 'username', 'nickname', 'gender', 'avatar', 'birthday']).where({ id: uuid }).find();
 
     // 更新登录信息
-    userId = await this.model('user').where({ id: userId }).update({
+    userId = await this.model('user').where({ id: uuid }).update({
       last_login_time: ['exp', 'CURRENT_TIMESTAMP()'],
       last_login_ip: clientIp
     });
 
-    const TokenSerivce = this.service('token', 'api');
-    const sessionKey = await TokenSerivce.create({ user_id: userId });
+    const TokenService = this.service('token', 'api');
+    const sessionKey = await TokenService.create({ user_id: userId });
 
     if (think.isEmpty(newUserInfo) || think.isEmpty(sessionKey)) {
       return this.fail('登录失败');
-    }
+    }``
 
     return this.success({ token: sessionKey, userInfo: newUserInfo });
   }
