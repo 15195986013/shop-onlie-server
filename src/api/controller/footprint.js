@@ -38,19 +38,19 @@ module.exports = class extends Base {
     list.data = _.map(_.uniqBy(list.data, function(item) {
       return item.goods_id;
     }), (item) => {
-      item.add_time = moment.unix(item.add_time).format('YYYY-MM-DD');
-      // 今天
-      if (moment().format('YYYY-MM-DD') === item.add_time) {
-        item.add_time = '今天';
-      }
-      // 昨天
-      if (moment().subtract(1, 'days').format('YYYY-MM-DD') === item.add_time) {
-        item.add_time = '昨天';
-      }
-      // 前天
-      if (moment().subtract(2, 'days').format('YYYY-MM-DD') === item.add_time) {
-        item.add_time = '前天';
-      }
+      // item.add_time = moment.unix(item.add_time).format('YYYY-MM-DD');
+      // // 今天
+      // if (moment().format('YYYY-MM-DD') === item.add_time) {
+      //   item.add_time = '今天';
+      // }
+      // // 昨天
+      // if (moment().subtract(1, 'days').format('YYYY-MM-DD') === item.add_time) {
+      //   item.add_time = '昨天';
+      // }
+      // // 前天
+      // if (moment().subtract(2, 'days').format('YYYY-MM-DD') === item.add_time) {
+      //   item.add_time = '前天';
+      // }
       return item;
     });
 
