@@ -57,14 +57,15 @@ module.exports = class extends Base {
     };
 
     if (think.isEmpty(addressId)) {
-      addressId = await this.model('address').add(addressData);
+      await this.model('address').add(addressData);
+      addressId = addressData.id;
     } else {
       await this.model('address').where({id: addressId, user_id: this.getLoginUserId()}).update(addressData);
     }
 
     // 如果设置为默认，则取消其它的默认
     if (this.post('is_default') === true) {
-      await this.model('address').where({id: ['<>', addressId], user_id: this.getLoginUserId()}).update({
+      await this.model('address').where({id: addressId, user_id: this.getLoginUserId()}).update({
         is_default: 0
       });
     }
