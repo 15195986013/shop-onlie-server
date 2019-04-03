@@ -45,6 +45,7 @@ module.exports = class extends Base {
     let addressId = this.post('id');
 
     const addressData = {
+      id:think.uuid("v4").replace(/-/g,''),
       name: this.post('name'),
       mobile: this.post('mobile'),
       province_id: this.post('province_id'),
