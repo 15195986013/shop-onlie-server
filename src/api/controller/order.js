@@ -140,11 +140,8 @@ module.exports = class extends Base {
     };
 
     // 开启事务，插入订单信息和订单商品
-    const orderId = await this.model('order').add(orderInfo);
-    orderInfo.id = orderId;
-    // if (!orderId) {
-    //   return this.fail('订单提交失败');
-    // }
+    await this.model('order').add(orderInfo);
+    const orderId =  orderInfo.id ;
 
     // 统计商品总价
     const orderGoodsData = [];
