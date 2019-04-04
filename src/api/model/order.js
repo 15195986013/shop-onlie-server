@@ -97,11 +97,9 @@ module.exports = class extends think.Model {
      * @returns {Promise.<boolean>}
      */
     async delOrderAndGoods(orderId) {
-        const  _this4 = this;
-        return _asyncToGenerator(function* () {
-            yield _this4.model('order').where({ id: orderId }).limit(1).delete();
-            yield _this4.model('order_goods').where({ order_id: orderId }).delete();
-        })();
+        const _this4 = this;
+        _this4.model('order').where({id: orderId}).limit(1).delete();
+        _this4.model('order_goods').where({order_id: orderId}).delete();
     }
 
     /**
