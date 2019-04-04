@@ -98,8 +98,9 @@ module.exports = class extends think.Model {
      */
     async delOrderAndGoods(orderId) {
         const _this4 = this;
-        _this4.model('order').where({id: orderId}).limit(1).delete();
-        _this4.model('order_goods').where({order_id: orderId}).delete();
+        const orderDel = _this4.model('order').where({id: orderId}).limit(1).delete();
+        const orderGoods = _this4.model('order_goods').where({order_id: orderId}).delete();
+        return orderDel && orderGoods
     }
 
     /**
