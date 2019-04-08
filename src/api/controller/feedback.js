@@ -12,7 +12,7 @@ module.exports = class extends Base {
       user_email: this.post('msg_mobile'),
       msg_content: this.post('msg_content')
     };
-    return this.success( this.model('feedback').add(feedbackData));
+    return this.success( this.model('feedback').addFeedBack(feedbackData));
   }
 
 };

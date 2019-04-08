@@ -9,6 +9,7 @@ module.exports = {
     'auth',
     'goods',
     'brand',
+    'feedback',
     'search',
     'region'
   ],
@@ -23,6 +24,7 @@ module.exports = {
     'cart/checked',
     'cart/update',
     'cart/delete',
+    'feedback/add',
     'cart/goodscount',
     'pay/notify'
   ]
