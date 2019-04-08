@@ -23,6 +23,13 @@ module.exports = class extends think.Controller {
   getTime() {
     return parseInt(Date.now() / 1000);
   }
+  /**
+   * 生成uid
+   * @returns {Number}
+   */
+  getUuid() {
+    return think.uuid("v4").replace(/-/g,'');
+  }
 
   /**
    * 获取当前登录用户的id
