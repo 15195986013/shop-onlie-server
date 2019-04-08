@@ -76,6 +76,18 @@ module.exports = class extends think.Model {
             case 0:
                 statusText = '未付款';
                 break;
+            case 1:
+                statusText = '已付款';
+                break;
+            case 2:
+                statusText = '发货中';
+                break;
+            case 3:
+                statusText = '待签收';
+                break;
+            case 4:
+                statusText = '交易完成';
+                break;
         }
 
         return statusText;

@@ -190,4 +190,18 @@ module.exports = class extends Base {
     let result = await this.model('order').delOrderAndGoods(orderId);
     return this.success(result);
   }
+  /**
+   * 更新订单状态
+   * @returns {Promise.<void>}
+   */
+  async updateAction() {
+    const orderId = this.get('orderId');
+      if (!orderId) {
+          return this.fail('订单不存在');
+      }
+    let result = this.model('order').where({id: orderId}).update({
+        order_status: 1
+    });
+    return this.success(result);
+  }
 };
