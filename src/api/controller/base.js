@@ -21,7 +21,7 @@ module.exports = class extends think.Controller {
    * @returns {Number}
    */
   getTime() {
-    return parseInt(Date.now() / 1000);
+    return ['exp', 'CURRENT_TIMESTAMP()'];
   }
   /**
    * 生成uid

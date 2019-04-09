@@ -17,6 +17,7 @@ module.exports = class extends Base {
     const content = this.post('content');
     const buffer = Buffer.from(content);
     const insertId = await this.model('comment').add({
+      id: this.getUuid(),
       type_id: typeId,
       value_id: valueId,
       content: buffer.toString('base64'),
@@ -83,7 +84,7 @@ module.exports = class extends Base {
       comment.type_id = commentItem.type_id;
       comment.value_id = commentItem.value_id;
       comment.id = commentItem.id;
-      comment.add_time = think.datetime(new Date(commentItem.add_time * 1000));
+      comment.add_time = commentItem.add_time ||'';
       comment.user_info = await this.model('user').field(['username', 'avatar', 'nickname']).where({id: commentItem.user_id}).find();
       comment.pic_list = await this.model('comment_picture').where({comment_id: commentItem.id}).select();
       commentList.push(comment);
