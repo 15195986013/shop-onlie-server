@@ -121,9 +121,10 @@ module.exports = class extends Base {
       whereMap.name = ['like', `%${keyword}%`];
       // 添加到搜索历史
       await this.model('search_history').add({
+        id: this.getUuid(),
         keyword: keyword,
         user_id: this.getLoginUserId(),
-        add_time: parseInt(new Date().getTime() / 1000)
+        add_time: ['exp', 'CURRENT_TIMESTAMP()']
       });
     }
 
