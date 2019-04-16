@@ -16,8 +16,9 @@ module.exports = class extends Base {
     const valueId = this.post('valueId');
     const content = this.post('content');
     const buffer = Buffer.from(content);
-    const insertId = await this.model('comment').add({
-      id: this.getUuid(),
+    const insertId = this.getUuid();
+    await this.model('comment').add({
+      id: insertId,
       type_id: typeId,
       value_id: valueId,
       content: buffer.toString('base64'),
