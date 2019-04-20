@@ -1,0 +1,41 @@
+﻿<div class="head clearfix">
+                <a href="/" class="logos">
+                </a>
+                <a class="back-page" href="javascript:history.go(-1)">
+                    <img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/images/0-02.png" />
+                </a>
+                <a class="nav-btn">
+                </a>
+                <div class="head-nav">
+                    <ul class="border-bottom border-top">
+                        <li class="active">
+                            <a href="/wap/" title="网站首页">
+                                网站首页
+                            </a>
+                        </li>
+                        {aspcms:navlist}
+                        <li>
+                            <a href="[navlist:link]" title="[navlist:name]">
+                                [navlist:name]
+                            </a>
+                        </li>
+                         {/aspcms:navlist}
+                    </ul>
+                </div>
+            </div>
+            <div class="head-bg">
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('.nav-btn').on('click',
+                    function() {
+                        if ($('.head-nav').is(':hidden')) {
+                            $(this).addClass('close');
+                            $('.head-nav').slideDown(300);
+                        } else {
+                            $(this).removeClass('close');
+                            $('.head-nav').slideUp(300);
+                        }
+                    })
+                });
+            </script>

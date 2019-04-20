@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8" />
+<title>[news:title]-{aspcms:sortname}-{aspcms:sitetitle}</title>
+<meta name="Keywords" content="[news:keyword]" />
+<meta name="Description" content="[news:desc]" /> 
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content=""/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+<link href="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/css/style.css" rel="stylesheet" type="text/css">
+<script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/jquery-1.11.3.min.js"></script>
+<script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/touchslide.1.1.source.js"></script>
+</head>
+<body>   
+
+<div class="center">
+<!--head-->
+{aspcms:top}
+
+
+<!--head end-->
+<div class="banner"><img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/images/ban-n.jpg"></div>
+<div class="height20"></div>
+
+
+
+<div class="site-pro-menu">
+    <ul >
+        
+        {aspcms:navlist type={aspcms:sortid}}
+        <li class="" >
+            <a class="text-overflow" href="[navlist:link]">[navlist:name]</a>
+        </li>
+        
+        {/aspcms:navlist}
+        
+        <div class="clear"></div>
+    </ul>
+</div>
+<div class="mid">
+    <div class="news-content">
+        <div class="news-content-title">[news:title]</div>
+        <div class="news-info">浏览次数：[news:visits]  作者：[news:author]  日期：[news:date]</div>
+        <div class="news-p">
+            [news:info]
+            <script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/aspcms_visitsadd.js"></script></div>
+    </div>
+    <div style="">特别声明：未经允许禁止转载</div>
+    <div class="page-in">
+        <div class="btn text-overflow">上一篇：{aspcms:prev}</div>
+        <div class="btn text-overflow">下一篇：{aspcms:next}</div>
+    </div>
+</div>
+<div class="height30"></div>
+
+<!--floor-1-->
+
+
+
+
+
+<!--foot-->
+<script type="text/javascript" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/share.js"></script><script type="text/javascript" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/aspcms_statistics.js"></script>
+{aspcms:foot}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script>
+            var w = /(http\:\/\/)?([^\/]+)\/?(.*)/.exec(document.URL);
+            if (!window.location.hash.match("fromapp")) {
+                if ((navigator.userAgent.match(/(iPhone|iPod|Android)/i))) {
+                    location.replace("http://" + w[2] + "/m/" + w[3]);
+                }
+            }
+        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Cache-Control" content="no-transform " />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta name="applicable-device" content="pc,mobile">
+        <meta name="MobileOptimized" content="width" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>
+            搜索结果-{aspcms:sitetitle}
+        </title>
+        <meta name="description" content="[about:desc]" />
+        <meta name="keywords" content="[about:keyword]" />
+        
+        <link href="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/css/style.css" rel="stylesheet" type="text/css">
+        <script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/js/jquery-1.11.3.min.js" type="text/javascript">
+        </script>
+        <script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/js/jquery.SuperSlide.2.1.1.js" type="text/javascript">
+        </script>
+        <!--[if IE 6]>
+            <script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/css/DD_belatedPNG.js">
+            </script>
+            <script>
+                DD_belatedPNG.fix('img,div,a');
+            </script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        <!--head-->
+        {aspcms:top}
+        <!--banner-->
+        <!--floor-1-->
+        <div class="news-list">
+            <div class="site-banner-box con-1200 clearfix" style="height:170px;margin-top:50px">
+                <div class="box-l f-l" style="margin-top:0">
+                    <p class="p1">
+                        德国砖丽美缝剂——
+                    </p>
+                    <p class="p2">
+                        全球家居缝隙系统美化专家！
+                    </p>
+                    <i class="icon-global i-1">
+                    </i>
+                    <i class="icon-global i-2">
+                    </i>
+                </div>
+                <div class="box-r" style="margin-top:0">
+                    <div class="keyword-box clearfix">
+                        <span>
+                            热门关键词：
+                        </span>
+                        
+                    </div>
+                    <div class="search-box">
+                        <div class="box-in">
+                            <form method='get' name='product_myformsearch' action='{aspcms:sitepath}{aspcms:languagepath}search.asp'>
+                                <button class="icon-global submit" type="submit">
+                                </button>
+                                <input class="text" type="text" value="" name="keys" placeholder="请输入关键词">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="news-list-box" id="ppp">
+                <ul class="con-1200" id="pretime">
+
+                     {aspcms:searchlist size=8}
+                    <li class="news_l">
+                        <a href="[searchlist:link]">
+                            <div class="pic f-l">
+                                <img src="[searchlist:pic]" />
+                            </div>
+                            <div class="date f-l">
+                                <span>
+                                    [searchlist:date style=m-d]
+                                </span>
+                                <p>
+                                    [searchlist:date style=yy-m-d]
+                                </p>
+                            </div>
+                            <div class="p f-l">
+                                <div class="p_t text-overflow">
+                                    [searchlist:title]
+                                </div>
+                                <div class="p_c">
+                                    [searchlist:desc len=80]...
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                   {/aspcms:searchlist} 
+                </ul>
+                <div id="page">
+                    <div class="page_info">
+                       [searchlist:pagenumber len=5]
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function date_yymd(ID) { //日期格式分离
+                var date_list = document.getElementById(ID).getElementsByTagName("li");
+                for (i = 0; i < date_list.length; i++) {
+                    var d = /\d+\-\d+$/ig.exec(date_list[i].getElementsByTagName("p")[0].innerHTML) date_list[i].getElementsByTagName("p")[0].innerHTML = d;
+                    var yym = /\d+/ig.exec(date_list[i].getElementsByTagName("span")[0].innerHTML) date_list[i].getElementsByTagName("span")[0].innerHTML = yym;
+
+                }
+            }
+            date_yymd("ppp");
+        </script>
+        <div id="txtsearch" style="width:0;height:0;overflow: hidden;display:none;">
+            美
+        </div>
+        <script>
+            $(function() {
+                $(document).ready(function() {
+                    var pretime = $('#pretime').html();
+                    var searchText = $('#txtsearch').html();
+                    var regExp = new RegExp(searchText, 'g');
+                    $('#pretime li').each(function() {
+                        var html = $(this).html();
+                        var newHtml = html.replace(regExp, '<em class="highlight">' + searchText + '</em>');
+                        $(this).html(newHtml);
+                    })
+                });
+            });
+        </script>
+        <!--foot-->
+        <script type="text/javascript" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/ /js/share.js">
+        </script>
+        <script type="text/javascript" src="/inc/AspCms_Statistics.asp">
+        </script>
+        {aspcms:foot}

@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8" />
+<title>[about:title]-{aspcms:sitetitle}</title>
+<meta name="description" content="[about:desc]" />
+<meta name="keywords" content="[about:keyword]" />
+<meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-title" content=""/>
+<meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png"/>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="128x128" href="apple-touch-icon-precomposed.png">
+<link href="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/css/style.css" rel="stylesheet" type="text/css">
+<script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/jquery-1.11.3.min.js"></script>
+<script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/touchslide.1.1.source.js"></script>
+</head>
+<body>
+
+<div class="center">
+<!--head-->
+{aspcms:top}
+
+<!--head end-->
+<div class="banner"><img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/images/ban-c.jpg"></div>
+<div class="height20"></div>
+
+
+<div class="inner-title">
+    <h2>联系方式</h2>
+    <div class="tit-en">CONTACT WAY</div>
+</div>
+
+<div class="contact-box">
+    <h3>{aspcms:companyname} </h3>
+    <p>地址：{aspcms:companyaddress}</p>
+    <p>官网：<a href="{aspcms:siteurl}" target="_blank">{aspcms:siteurl}</a></p>
+    <p>中国区服务电话：{aspcms:companyphone}</p>
+    <p>电话：{aspcms:companyphone}</p>
+    <p>招商热线：{aspcms:companymobile} </p>
+
+    <br>
+                <br>
+                <br>
+    <div class="code clearfix">
+        <img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/images/qr1.png">
+        <img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/images/qr2.png">
+    </div>
+</div>
+
+<div class="height20"></div>
+
+<div class="inner-title">
+    <h2>在线留言</h2>
+    <div class="tit-en">INLINE MESSAGE</div>
+</div>
+
+
+<div class="mid main-box feed">
+    <form method="post" action="/custom/save.asp?action=add" name="cform" id="cform" class="msgForm">
+        <div class="text-li clearfix" style="display:none">
+            <div class="in"><input name="FaqTitle" type="text" class="in_name" value="在线留言" /></div>
+            <span>*</span>
+        </div>
+        <div class="text-li clearfix">
+            <div class="in"><input name="Contact" type="text" class="in_name" placeholder="联系人" /></div>
+            <span>*</span>
+        </div>
+        <div class="text-li clearfix">
+            <div class="in"><input name="ContactWay" type="text" class="in_name" placeholder="联系电话" /></div>
+            <span>*</span>
+        </div>
+        <div class="text-li clearfix">
+            <div class="in2"><textarea name="Content" class="in_name" placeholder="内容"></textarea></div>
+            <span>*</span>
+        </div>
+        <div class="text-li clearfix">
+            <div class="in3"><input class="input-text" name="code" class="" onClick="checkyan(this)" onblur="checkyan2(this)" type="text" placeholder="验证码"></div>
+
+
+                    <div class="yanzhenma">
+                       <img src="{aspcms:sitepath}/inc/checkcode.asp" alt="看不清验证码?点击刷新!" title="看不清验证码?点击刷新!"
+                                onClick="this.src='{aspcms:sitepath}/inc/checkcode.asp'" />
+                    </div>
+
+
+
+        </div>
+        <div class="btn clearfix">
+            <input class="sub icon-global" type="submit" value="提交" />
+            <input class="res icon-global" type="reset" value="重置" />
+        </div>
+    </form>
+</div>
+<div class="height30"></div>
+<!--foot-->
+<script type="text/javascript" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/share.js"></script><script type="text/javascript" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/wap/js/aspcms_statistics.js"></script>
+{aspcms:foot}

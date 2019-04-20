@@ -1,0 +1,101 @@
+﻿<div class="head">
+            <div class="head-top">
+                <div class="con-1200 text-r">
+                    <span class="sp-phone">
+                        <i class="icon-global i-1">
+                        </i>
+                        中国区服务电话：400 881 3066
+                    </span>
+                   <!-- <span class="sp-email">
+                        <i class="icon-global i-2">
+                        </i>
+                        <a href="/"
+                        target="_blank" rel="external nofollow">
+                            意大利马瓦罗淘宝企业店
+                        </a>
+                    </span>
+                    <span class="sp-email">
+                        <i class="icon-global2 i-3">
+                        </i>
+                        <a href="/" target="_blank" rel="external nofollow">
+                            意大利马瓦罗京东旗舰店
+                        </a>
+                    </span>-->
+                    <span class="sp-wechat">
+                        <i class="icon-global i-4">
+                        </i>
+                        加盟微信
+                        <div class="qr-imgs">
+                            <img src="/templates/cn/images/zhaoshang.jpg" alt="意大利马瓦罗美缝剂真瓷胶">
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="head-nav">
+                <div class="head-box con-1200 por">
+                    <div class="logo">
+                        <h1>
+                            <a href="/">
+                                <img src="{aspcms:sitelogo}" alt="" title="" />
+                                <div class="p">
+                 
+                                </div>
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="nav" id="nav">
+                        <ul class="clearfix">
+                            <li class="active">
+                                <a href="/">
+                                    <span class="ch">
+                                        网站首页
+                                    </span>
+                                    <span class="en">
+                                        home
+                                    </span>
+                                </a>
+                            </li>
+
+                            {aspcms:navlist}
+                            <li>
+                                <a href="[navlist:link]" title="[navlist:name]">
+                                    <span class="ch">
+                                        [navlist:name]
+                                    </span>
+                                    <span class="en">
+                                        [navlist:enname]
+                                    </span>
+                                </a>
+                                {if:[navlist:subcount]>0}
+                                <div class="nav-child">
+                                    <ul class="sub">
+                                         {aspcms:1navlist type=[navlist:sortid]}
+                                        <li>
+                                            <a href="[1navlist:link]" title="[1navlist:name]">
+                                                [1navlist:name]
+                                            </a>
+                                        </li>
+                                        {/aspcms:1navlist}
+                                    </ul>
+                                </div>
+                                {end if}
+                            </li>
+                            {/aspcms:navlist}
+
+                        </ul>
+                        <i class="nav_line" id="nav_line">
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#nav>ul>li').hover(function() {
+                    $(this).find('.nav-child').slideDown(200);
+                },
+                function() {
+                    $(this).find('.nav-child').slideUp(100);
+                });
+            });
+        </script>

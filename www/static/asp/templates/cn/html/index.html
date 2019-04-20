@@ -1,0 +1,666 @@
+﻿<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{aspcms:sitetitle}{aspcms:additiontitle}</title>
+        <meta name="Keywords" content="{aspcms:sitekeywords}" />
+        <meta name="Description" content="{aspcms:sitedesc}" />
+        
+        <link href="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/css/style.css" rel="stylesheet" type="text/css">
+        <script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/js/jquery-1.11.3.min.js" type="text/javascript">
+        </script>
+        <script src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/js/jquery.superslide.2.1.1.js" type="text/javascript">
+        </script>
+        <!--[if IE 6]>
+            <script src="/js/dd_belatedpng.js">
+            </script>
+            <script>
+                DD_belatedPNG.fix('img,div,a');
+            </script>
+        <![endif]-->
+        <meta name="baidu-site-verification" content="JJGqHkndiK" />
+        <style>
+            .friendlink{width:1200px;margin:auto;padding:30px 0 65px;line-height:24px;}
+            .friendlink a{margin-right:15px}
+        </style>
+        <script>
+            var w = /(http\:\/\/)?([^\/]+)\/?(.*)/.exec(document.URL);
+            if (!window.location.hash.match("fromapp")) {
+                if ((navigator.userAgent.match(/(iPhone|iPod|Android)/i))) {
+                    location.replace("/m/");
+                }
+            }
+        </script>
+    </head>
+    
+    
+    <body>
+        <!--head-->
+
+        {aspcms:top} 
+        
+        <!--banner-->
+        <div class="banner">
+            <div id="slideBox" class="slideBox">
+                <div class="hd">
+                    <ul>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                        <li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        {aspcms:slidelist id=*}
+                        <li style="position:relative;">
+                            <a href="#">
+                                <img src="[slidelist:pic]" width="1920" height="640" alt="[slidelist:title]"
+                                />
+                            </a>
+                        </li>
+                        {/aspcms:slidelist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script id="jsID" type="text/javascript">
+            var ary = location.href.split("&");
+            jQuery(".slideBox").slide({
+                mainCell: ".bd ul",
+                effect: "fade",
+                autoPlay: true,
+                interTime: 3000
+            });
+        </script>
+        <!--floor-1-->
+        <div class="site-banner-box con-1200 clearfix">
+            <div class="box-l f-l">
+                <p class="p1">
+                    艺术美缝连锁品牌——
+                </p>
+                <p class="p2">
+                    Artistic beauty sewing chain brand！
+                </p>
+                <i class="icon-global i-1">
+                </i>
+                <i class="icon-global i-2">
+                </i>
+            </div>
+            <div class="box-r">
+                <div class="keyword-box clearfix">
+                    <span>
+                        热门关键词：
+                    </span>
+                    
+                </div>
+                <div class="search-box">
+                    <div class="box-in">
+                        <form method='get' name='product_myformsearch' action='{aspcms:sitepath}{aspcms:languagepath}search.asp'>
+                            <button class="icon-global submit" type="submit">
+                            </button>
+                            <input class="text" type="text" value="" name="keys" placeholder="请输入关键词">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--floor-2-->
+        <div class="site-title">
+            <h2>
+                关于意大利
+                <span>
+                    MaWaLuo
+                </span>
+                马瓦罗美缝剂
+            </h2>
+            <p>
+                about the german MAVARE group
+            </p>
+            <div class="line">
+            </div>
+        </div>
+        <div class="nbanner">
+            <img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/index-01.jpg" width="1920" height="430" alt="意大利马瓦罗美缝剂真瓷胶">
+            <div class="nbanner-p">
+                <div class="p1">
+                </div>
+                <div class="p2">
+                </div>
+            </div>
+        </div>
+        <div class="site-about">
+            <div class="con-1200 clearfix">
+                
+                    <div class="site-about-text">
+                        <a href="/about/?19.html#a1">
+                        <div class="tit-en">
+                            company
+                            <br>
+                            <span>
+                                profile
+                            </span>
+                        </div>
+                        <div class="tit-ch clearfix">
+                            <span>
+                                公司简介
+                            </span>
+                            <div class="line">
+                            </div>
+                        </div>
+                        <div class="p">
+                            意大利马瓦罗隶属于ITALIAN MAWARE LTD集团公司品牌之一，旗下多个品牌专注于装饰材料、胶黏剂的产品研发与生产、产品享誉全球！
+                        </div>
+                        </a>
+                    </div>
+                    <div class="site-about-text site-about-text-bg2">
+                        <a href="/about/?19.html#a5">
+                        <div class="tit-en">
+                            Innovation
+                            <br>
+                            <span>
+                                technology
+                            </span>
+                        </div>
+                        <div class="tit-ch">
+                            <span>
+                                生态环保
+                            </span>
+                            <div class="line">
+                            </div>
+                        </div>
+                        <div class="p">
+                            “意大利马瓦罗美缝”一直致力于绿色、健康的产品研发和推广，倡环境保护之风，走持续发展之路，一步一个脚印，为造福社会而奋斗！
+                        </div>
+                        </a>
+                    </div>
+                    <div class="site-about-text site-about-text-bg2">
+                        <a href="/about/?19.html#a7">
+                        <div class="tit-en">
+                            social
+                            <br>
+                            <span>
+                                responsibility
+                            </span>
+                        </div>
+                        <div class="tit-ch">
+                            <span>
+                                品牌理念
+                            </span>
+                            <div class="line">
+                            </div>
+                        </div>
+                        <div class="p">
+                            品牌的理念是将质量放在高于企业愿景的位置，产品的品质是我们的生命线，也是我们未来的核心竞争力。
+                        </div>
+                        </a>
+                    </div>
+                    <div class="site-about-text">
+                        <a href="/about/?19.html#a2">
+                        <div class="tit-en">
+                            honor
+                            <br>
+                            <span>
+                                halls
+                            </span>
+                        </div>
+                        <div class="tit-ch">
+                            <span>
+                                服务创新
+                            </span>
+                            <div class="line">
+                            </div>
+                        </div>
+                        <div class="p">
+                           “意大利马瓦罗美缝”致力打造行业标杆式服务品牌，采用创新引导式服务、需求式服务、平台式服务、规范式服务，让每一位合作伙伴、消费者省心、放心。
+                        </div>
+                        </a>
+                    </div>
+
+            </div>
+        </div>
+        <!--floor-3-->
+        <div class="site-title">
+            <h2>
+                意大利
+                <span>
+                    MaWaLuo
+                </span>
+                马瓦罗美缝剂系列产品
+            </h2>
+            <p>
+                german MAVARE products center
+            </p>
+            <div class="line">
+            </div>
+        </div>
+        <div class="site-product por">
+            <div class="site-product-bg">
+            </div>
+            <div class="site-product-center con-1200">
+                <div class="site-intitle">
+                    <div class="tit-en">
+                        <span>
+                            product center
+                        </span>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="tit-ch">
+                        意大利马瓦罗美缝剂王国
+                    </div>
+                </div>
+                <div class="site-product-box">
+                    <ul class="clearfix">
+
+                        {aspcms:content sort=6 num=2 order=order star=1}
+                        <li class="text">
+                            <div class="text-box">
+                                <div class="tit">
+                                    <strong>
+                                        [content:title]
+                                    </strong>
+                                </div>
+                                <p>
+                                    [content:desc len=30]
+                                </p>
+                                <a class="read-more" href="[content:link]">
+                                </a>
+                            </div>
+                            <em>
+                            </em>
+                        </li>
+                        <li class="pic">
+                            <a href="[content:link]">
+                                <img src="[content:pic]" width="300" height="300" alt="[content:title]">
+                            </a>
+                        </li>
+
+                        {/aspcms:content}
+                        {aspcms:content sort=7 num=4 order=order star=1}
+                        
+                        
+                        <li class="text">
+                            <div class="text-box">
+                                <div class="tit">
+                                   <strong>
+                                        [content:title]
+                                    </strong>
+                                </div>
+                                <p>
+                                    [content:desc len=30]
+                                </p>
+                                <a class="read-more" href="[content:link]">
+                                </a>
+
+                            </div>
+                            <!--<img class="bg" src="[content:pic]" width="300" height="300" alt="[content:title]">-->
+                            <em>
+                            </em>
+                        </li>
+                        <li class="pic">
+                            <a href="[content:link]">
+                                <img src="[content:pic]" width="300" height="300" alt="[content:title]">
+                            </a>
+                        </li>
+                       {/aspcms:content}
+                       {aspcms:content sort=20 num=2 order=order star=1}
+                       <li class="pic">
+                            <a href="[content:link]">
+                                <img src="[content:pic]" width="300" height="300" alt="[content:title]">
+                            </a>
+                        </li>                       
+                        <li class="text">
+                            <div class="text-box">
+                                <div class="tit">
+                                    <strong>
+                                        [content:title]
+                                    </strong>
+                                </div>
+                                <p>
+                                    [content:desc len=30]
+                                </p>
+                                <a class="read-more" href="[content:link]">
+                                </a>
+                            </div>
+                            <em>
+                            </em>
+                        </li>
+                        
+
+                        {/aspcms:content}
+                        {aspcms:content sort=65 num=2 order=order star=1}
+                        <li class="pic">
+                            <a href="[content:link]">
+                                <img src="[content:pic]" width="300" height="300" alt="[content:title]" style="width:200px;height:300px;margin-left:40px">
+                            </a>
+                        </li>                   
+                        <li class="text">
+                            <div class="text-box">
+                                <div class="tit">
+                                    <strong>
+                                        [content:title]
+                                    </strong>
+                                </div>
+                                <p>
+                                    [content:desc len=30]
+                                </p>
+                                <a class="read-more" href="[content:link]">
+                                </a>
+                            </div>
+                            <em>
+                            </em>
+                        </li>
+                         
+
+                        {/aspcms:content}
+                    </ul>
+                </div>
+                <div class="site-product-menu">
+                    <div class="site-product-menu-box">
+                        {aspcms:navlist type=5}
+                        <a href="[navlist:link]">
+                            [navlist:name]
+                        </a>
+                        {/aspcms:navlist}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--floor-4-->
+        <div class="site-title">
+            <h2>
+                意大利
+                <span>
+                    MaWaLuo
+                </span>
+                马瓦罗美缝 ，中国区合作伙伴招募中
+            </h2>
+            <p>
+                joining german MAVARE to successed
+            </p>
+            <div class="line">
+            </div>
+        </div>
+        <div class="site-join">
+            <div class="con-1200">
+                <div class="site-intitle">
+                    <div class="tit-en">
+                        <span>
+                            welcome to join in
+                        </span>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="tit-ch">
+                        加盟意大利马瓦罗，共享繁华！
+                    </div>
+                </div>
+                <div class="site-join-box">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="/about/?55.html#j1">
+                                <div class="icon-global icon-bg">
+                                    <i class="icon-global i-1">
+                                    </i>
+                                </div>
+                                <div class="tit">
+                                    四大优势
+                                </div>
+                                <div class="p">
+                                    <p>
+                                        美缝剂十大品牌、
+                                    </p>
+                                    <p>
+                                        技术领先、产品丰富而全面
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <!--<li class="sec">
+                            <a href="/about/?55.html#j2">
+                                <div class="icon-global icon-bg">
+                                    <i class="icon-global i-2">
+                                    </i>
+                                </div>
+                                <div class="tit">
+                                    四大支持
+                                </div>
+                                <div class="p">
+                                    <p>
+                                        培训支持、推广支持、
+                                    </p>
+                                    <p>
+                                        经营支持、平台支持
+                                    </p>
+                                </div>
+                            </a>
+                        </li>-->
+                        <li>
+                            <a href="/about/?55.html#j3">
+                                <div class="icon-global icon-bg">
+                                    <i class="icon-global i-3">
+                                    </i>
+                                </div>
+                                <div class="tit">
+                                    六大支持
+                                </div>
+                                <div class="p">
+                                    <p>
+                                        区域独家授权、无理由退换货、
+                                    </p>
+                                    <p>
+                                        承保产品、很具竞争力的产品、全程经营指导
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--floor-4-->
+       <!-- <div class="site-title">
+            <h2>
+                意大利马瓦罗美缝剂荣誉客户
+            </h2>
+            <p>
+                cooperate with well-know enterprises
+            </p>
+            <div class="line">
+            </div>
+        </div>
+        <div class="site-coop">
+            <div class="con-1200">
+                <div class="site-intitle">
+                    <div class="tit-en">
+                        <span>
+                            cooperative partner
+                        </span>
+                    </div>
+                    <div class="line">
+                    </div>
+                    <div class="tit-ch">
+                        合作伙伴
+                    </div>
+                </div>
+                <div class="site-coop-box">
+                    <ul class="clearfix">
+                        <li class="pic">
+                            <img class="img-bg" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/index-21.jpg" width="300" height="225"
+                            alt="新中源陶瓷">
+                        </li>
+                        <li class="coop">
+                            <span>
+                            </span>
+                            <img class="img-coop" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/coop-1.png" width="300" height="225"
+                            alt="新中源陶瓷logo">
+                            <em>
+                            </em>
+                        </li>
+                        <li class="pic">
+                            <img class="img-bg" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/index-22.jpg" width="300" height="225"
+                            alt="马可波罗瓷砖">
+                        </li>
+                        <li class="coop">
+                            <span>
+                            </span>
+                            <img class="img-coop" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/coop-2.png" width="300" height="225"
+                            alt="马可波罗瓷砖logo">
+                            <em>
+                            </em>
+                        </li>
+                        <li class="coop">
+                            <span>
+                            </span>
+                            <img class="img-coop" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/coop-3.png" width="300" height="225"
+                            alt="箭牌卫浴瓷砖logo">
+                            <em>
+                            </em>
+                        </li>
+                        <li class="pic">
+                            <img class="img-bg" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/index-23.jpg" width="300" height="225"
+                            alt="箭牌卫浴瓷砖">
+                        </li>
+                        <li class="coop">
+                            <span>
+                            </span>
+                            <img class="img-coop" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/coop-4.png" width="300" height="225"
+                            alt="蒙娜丽莎">
+                            <em>
+                            </em>
+                        </li>
+                        <li class="pic">
+                            <img class="img-bg" src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/index-24.jpg" width="300" height="225"
+                            alt="蒙娜丽莎logo">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>-->
+        <!--floor-5-->
+        <div class="site-title">
+            <h2>
+                意大利马瓦罗企业动态
+            </h2>
+            <p>
+                Understanding MAVARE's real-time dynamics
+            </p>
+            <div class="line">
+            </div>
+        </div>
+        <div class="nbanner">
+            <img src="{aspcms:sitepath}/templates/{aspcms:defaulttemplate}/images/index-m.jpg" width="1920" height="308" alt="新闻中心">
+        </div>
+        <div class="site-news">
+            <div class="con-1200">
+                <div class="site-news-box">
+                    <div class="hd">
+                        <ul>
+                            {aspcms:navlist type=1}
+                            <li>
+                                [navlist:name]
+                            </li>
+                            {/aspcms:navlist}
+                        </ul>
+                        <a class="more" href="/list/?1_1.html">
+                            more
+                        </a>
+                    </div>
+                    <div class="bd">
+                        <ul class="clearfix">
+
+                            {aspcms:content sort=2 num=6 order=order star=1}
+                            <li>
+                                <div class="pic">
+                                    <a href="[content:link]" title="[content:title]">
+                                        <img src="[content:pic]" alt="[content:title]">
+                                    </a>
+                                </div>
+                                <div class="li-box">
+                                    <div class="tit text-overflow">
+                                        <a href="[content:link]">
+                                            [content:title]
+                                        </a>
+                                    </div>
+                                    <div class="desc text-overflow">
+                                        [content:desc len=80]...
+                                    </div>
+                                    <a class="read-more" href="[content:link]">
+                                    </a>
+                                </div>
+                            </li>
+                            {/aspcms:content}
+
+                        </ul>
+                        <ul class="clearfix">
+                            {aspcms:content sort=3 num=6 order=order star=1}
+                            <li>
+                                <div class="pic">
+                                    <a href="[content:link]" title="[content:title]">
+                                        <img src="[content:pic]" alt="[content:title]">
+                                    </a>
+                                </div>
+                                <div class="li-box">
+                                    <div class="tit text-overflow">
+                                        <a href="[content:link]">
+                                            [content:title]
+                                        </a>
+                                    </div>
+                                    <div class="desc text-overflow">
+                                        [content:desc len=80]...
+                                    </div>
+                                    <a class="read-more" href="[content:link]">
+                                    </a>
+                                </div>
+                            </li>
+                            {/aspcms:content}
+                        </ul>
+                        <ul class="clearfix">
+                            {aspcms:content sort=4 num=6 order=order star=1}
+                            <li>
+                                <div class="pic">
+                                    <a href="[content:link]" title="[content:title]">
+                                        <img src="[content:pic]" alt="[content:title]">
+                                    </a>
+                                </div>
+                                <div class="li-box">
+                                    <div class="tit text-overflow">
+                                        <a href="[content:link]">
+                                            [content:title]
+                                        </a>
+                                    </div>
+                                    <div class="desc text-overflow">
+                                        [content:desc len=80]...
+                                    </div>
+                                    <a class="read-more" href="[content:link]">
+                                    </a>
+                                </div>
+                            </li>
+                            {/aspcms:content}
+                        </ul>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".site-news-box").slide({
+                        effect: "fold",
+                        trigger: "click"
+                    });
+                </script>
+            </div>
+        </div>
+        <!---->
+        <div class="friendlink">
+            友情链接：
+            {aspcms:linklist  type=font group=1}
+            <a href="[linklist:link]" target="_blank">
+                [linklist:name]
+            </a>
+           {/aspcms:linklist}
+        </div>
+        <!--foot-->
+       {aspcms:foot}
